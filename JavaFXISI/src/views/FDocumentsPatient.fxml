@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FDocumentsPatientController">
+    <children>
+         <AnchorPane prefHeight="650.0" prefWidth="1100.0">
+   <children>
+      <AnchorPane fx:id="topAnchor" layoutY="-2.0" prefHeight="136.0" prefWidth="1100.0" styleClass="gradient-light" stylesheets="@style.css">
+         <children>
+                  <JFXSnackbar fx:id="snackEdit" />
+            <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="14.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/left.png" />
+               </image>
+            </ImageView>
+                  <JFXButton fx:id="btnEdit" buttonType="RAISED" layoutX="819.0" layoutY="38.0" onAction="#editDriver" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #00B3A0;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="16.0" />
+                     </font>
+                  </JFXButton>
+         </children></AnchorPane>
+      <JFXTabPane layoutY="100.0" prefHeight="550.0" prefWidth="1100.0" tabMinWidth="171.0">
+         <tabs>
+            <Tab text="CONSULTATIONS">
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="556.0">
+                     <children>
+                              <HBox alignment="CENTER" layoutX="8.0" layoutY="9.0" prefHeight="474.0" prefWidth="1070.0" spacing="60.0">
+                                 <children>
+                              <AnchorPane prefHeight="474.0" prefWidth="1053.0" styleClass="card">
+                                       <children>
+                                          <TableView fx:id="tableconsultation" layoutX="25.0" layoutY="23.0" prefHeight="429.0" prefWidth="1017.0">
+                                            <columns>
+                                              <TableColumn prefWidth="123.0" text="DATE CONSULTATION" />
+                                              <TableColumn prefWidth="161.0" text="MOTIF CONSULTATION" />
+                                                <TableColumn prefWidth="82.0" text="TAILLE" />
+                                                <TableColumn prefWidth="84.0" text="POIDS" />
+                                                <TableColumn prefWidth="99.0" text="T.CORPORELLE" />
+                                                <TableColumn prefWidth="89.0" text="POULS" />
+                                                <TableColumn prefWidth="377.0" text="OBSERVATION" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="INFO PATIENT">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="23.0" layoutY="22.0" prefHeight="437.0" prefWidth="360.0" styleClass="card">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="53.0" text="NOM" />
+                                    <Label layoutX="35.0" layoutY="103.0" text="PRENOM" />
+                                    <Label layoutX="35.0" layoutY="154.0" text="DATE NAISSANCE" />
+                                    <Label layoutX="35.0" layoutY="210.0" text="GENRE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="482.0" layoutY="22.0" prefHeight="440.0" prefWidth="471.0" styleClass="card" />
+                           </children></AnchorPane>
+              </content>
+            </Tab>
+                  <Tab text="ORDONNANCES">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="23.0" layoutY="22.0" prefHeight="437.0" prefWidth="360.0" styleClass="card" />
+                              <AnchorPane layoutX="482.0" layoutY="22.0" prefHeight="440.0" prefWidth="471.0" styleClass="card" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="EXAMEN DU PATIENT">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="23.0" layoutY="22.0" prefHeight="437.0" prefWidth="360.0" styleClass="card">
+                                 <children>
+                                    <Label layoutX="25.0" layoutY="41.0" text="NOM" />
+                                    <Label layoutX="25.0" layoutY="74.0" text="Label" />
+                                    <Label layoutX="35.0" layoutY="108.0" text="Label" />
+                                    <Label layoutX="25.0" layoutY="173.0" text="Label" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="482.0" layoutY="22.0" prefHeight="440.0" prefWidth="471.0" styleClass="card" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
+    </children>
+    </StackPane>
